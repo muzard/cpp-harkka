@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/arttu/Projects/cpp-harkka/ch13/13.3/main'
+relocations:     []
+...
