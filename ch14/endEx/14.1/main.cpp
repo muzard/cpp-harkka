@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 class Point2d
 {
@@ -17,6 +18,11 @@ public:
     {
         std::cout << "Point2d(" << m_x << ", " << m_y << ")}\n";
     }
+
+    double distanceTo(Point2d& p) const
+    {
+        return std::sqrt((m_x-p.m_x)*(m_x-p.m_x) + (m_y-p.m_y)*(m_y-p.m_y));
+    }
 };
 
 int main()
@@ -28,6 +34,8 @@ int main()
 
     first.print();
     second.print();
+
+    std::cout << "Distance between two points: " << first.distanceTo(second) << '\n';
 
     return 0;
 }
