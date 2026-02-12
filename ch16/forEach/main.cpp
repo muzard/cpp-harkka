@@ -2,20 +2,14 @@
 #include <vector>
 
 template <typename T>
-bool existsEqual(std::vector<T> arr, T item)
+bool existsEqual(std::vector<T>& arr, T& item)
 {
-    bool itemFound {false};
-
-    for (auto& elem : arr)
+    for (const auto& elem : arr)
     {
-        if (item == elem)
-        {
-            itemFound = true;
-            break;
-        }
+        if (item == elem) return true;
     }
 
-    return itemFound;
+    return false;
 }
 
 int main()
